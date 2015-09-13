@@ -1,0 +1,15 @@
+
+/* Class = "WKInterfaceButton"; title = "Player First"; ObjectID = "3LO-Zg-NCb"; */
+"3LO-Zg-NCb.title" = "先手";
+
+/* Class = "WKInterfaceController"; title = "TicTacToe"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "井字格";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "QaQ-VZ-77L"; */
+"QaQ-VZ-77L.text" = "Label";
+
+/* Class = "WKInterfaceButton"; title = "AI First"; ObjectID = "V5e-PZ-1Lg"; */
+"V5e-PZ-1Lg.title" = "后手";
+
+/* Class = "WKInterfaceLabel"; text = "Tic Tac Toe"; ObjectID = "xOt-j4-MCn"; */
+"xOt-j4-MCn.text" = "井字格游戏";

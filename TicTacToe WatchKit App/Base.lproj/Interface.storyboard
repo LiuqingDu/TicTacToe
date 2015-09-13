@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ol6-e3-xmw">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ol6-e3-xmw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
-        <!--井字格-->
+        <!--TicTacToe-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="井字格" id="AgC-eL-Hgc" customClass="PlayInterfaceController" customModule="TicTacToe_WatchKit_Extension">
+                <controller title="TicTacToe" backgroundImage="bg" contentMode="scaleAspectFill" id="AgC-eL-Hgc" customClass="PlayInterfaceController" customModule="TicTacToe_WatchKit_Extension">
                     <items>
                         <group width="1" height="0.30000000000000016" alignment="center" id="Bqb-uO-2qm">
                             <items>
@@ -86,7 +86,7 @@
         <!--resultView-->
         <scene sceneID="kum-6V-Ekl">
             <objects>
-                <controller identifier="resultView" id="qgW-GG-O9b" customClass="ResultInterfaceController" customModule="TicTacToe_WatchKit_Extension">
+                <controller identifier="resultView" backgroundImage="wood bg" contentMode="scaleAspectFill" id="qgW-GG-O9b" customClass="ResultInterfaceController" customModule="TicTacToe_WatchKit_Extension">
                     <items>
                         <label alignment="center" verticalAlignment="center" text="Label" id="QaQ-VZ-77L"/>
                     </items>
@@ -97,18 +97,18 @@
             </objects>
             <point key="canvasLocation" x="657" y="526"/>
         </scene>
-        <!--Begin Interface Controller-->
+        <!--wood bg-->
         <scene sceneID="739-ud-1Pa">
             <objects>
-                <controller id="ol6-e3-xmw" customClass="BeginInterfaceController" customModule="TicTacToe_WatchKit_Extension">
+                <controller backgroundImage="wood bg" contentMode="scaleAspectFill" id="ol6-e3-xmw" customClass="BeginInterfaceController" customModule="TicTacToe_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="井字格游戏" id="xOt-j4-MCn"/>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="先手" id="3LO-Zg-NCb">
+                        <label alignment="center" text="Tic Tac Toe" id="xOt-j4-MCn"/>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Player First" id="3LO-Zg-NCb">
                             <connections>
                                 <segue destination="AgC-eL-Hgc" kind="push" identifier="firstMoveSegue" id="cAG-71-pLn"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="后手" id="V5e-PZ-1Lg">
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="AI First" id="V5e-PZ-1Lg">
                             <connections>
                                 <segue destination="AgC-eL-Hgc" kind="push" identifier="secondMoveSegue" id="HOu-6c-MTm"/>
                             </connections>

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TicTacToe
+
+  Created by Liuqing Du on 29/05/2015.
+  Copyright (c) 2015 JuneDesign. All rights reserved.
+*/
+PLAY_AGAIN = "Play Again";
+END_TITTLE = "Game End";
+WIN = "You Win";
+LOSE = "You Lose";
+DRAW = "Draw";

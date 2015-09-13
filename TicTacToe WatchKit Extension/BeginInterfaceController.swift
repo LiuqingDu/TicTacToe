@@ -30,7 +30,7 @@ class BeginInterfaceController: WKInterfaceController {
     
     override func contextForSegueWithIdentifier(segueIdentifier: String) -> AnyObject? {
         var first = true
-        println(segueIdentifier)
+        //println(segueIdentifier)
         if (segueIdentifier == "firstMoveSegue") {
             first = true
         } else if (segueIdentifier == "secondMoveSegue") {

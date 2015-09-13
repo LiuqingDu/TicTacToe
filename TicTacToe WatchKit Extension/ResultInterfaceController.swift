@@ -12,6 +12,12 @@ import Foundation
 
 class ResultInterfaceController: WKInterfaceController {
     
+    var play_again = NSLocalizedString("PLAY_AGAIN", comment: "Play again")
+    var end_tittle = NSLocalizedString("END_TITTLE", comment: "Game End")
+    var draw = NSLocalizedString("DRAW", comment: "Draw")
+    var win = NSLocalizedString("WIN", comment: "Win")
+    var lose = NSLocalizedString("LOSE", comment: "Lose")
+    
     @IBOutlet weak var resultLabel: WKInterfaceLabel!
 
     override func awakeWithContext(context: AnyObject?) {
@@ -19,26 +25,20 @@ class ResultInterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         
-        setTitle("再来")
+        setTitle(play_again)
         
         switch (context as! Int) {
         case 0:
-            resultLabel.setText("平局")
+            resultLabel.setText(draw)
         case 1:
-            resultLabel.setText("恭喜您赢了")
+            resultLabel.setText(win)
         case -1:
-            resultLabel.setText("您输了")
+            resultLabel.setText(lose)
         default:
             resultLabel.setText("")
         }
         
     }
-    
-    override func dismissController() {
-        println("dismiss")
-    }
-    
-    
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Tic Tac Toe"; ObjectID = "Yyl-TQ-NnR"; */
+"Yyl-TQ-NnR.text" = "井字格游戏";
+
+/* Class = "UIButton"; normalTitle = "Player First"; ObjectID = "c8F-zD-xjh"; */
+"c8F-zD-xjh.normalTitle" = "先手";
+
+/* Class = "UIButton"; normalTitle = "AI First"; ObjectID = "jk3-6n-gli"; */
+"jk3-6n-gli.normalTitle" = "后手";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "RX-gf-WhD"; */
+"iRX-gf-WhD.normalTitle" = "返回";

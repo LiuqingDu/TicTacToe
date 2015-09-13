@@ -83,38 +83,53 @@ class PlayInterfaceController: WKInterfaceController {
         button20.setTitle(s[2][0])
         button21.setTitle(s[2][1])
         button22.setTitle(s[2][2])
+        
+        if (playAI.getBoard().check() == 1) {
+            //println("Player Win")
+            result(1)
+        } else if (playAI.getBoard().check() == -1) {
+            //println("AI Win")
+            result(-1)
+        } else if (playAI.getBoard().check() == 3) {
+            //println("Nice Move")
+            //aiMove()
+        } else if (playAI.getBoard().check() == 0){
+            //println("Draw")
+            result(0)
+        }
     }
     
     
     func move(x: Int, y: Int) {
-        //println(playAI.getBoard().getBoard())
         
         if (playAI.getBoard().getBoard()[x][y] == 0) {
             
             playAI.getBoard().dropPiece(PieceLocation(p: flag, x: x, y: y))
-            aiMove()
             
-            if (playAI.getBoard().check() == 1) {
-                println("Player Win")
-                result(1)
-                flag = 2
-            } else if (playAI.getBoard().check() == -1) {
-                println("AI Win")
-                result(-1)
-                flag = 2
-            } else if (playAI.getBoard().check() == 3) {
-                println("Nice Move")
-            } else {
-                println("Draw")
-                result(0)
-                flag = 2
+            if (checkIfEnd() == false) {
+                aiMove()
             }
         }
         
     }
     
+    func checkIfEnd() -> Bool{
+        if (playAI.getBoard().check() == 1) {
+            result(1)
+            return true
+        } else if (playAI.getBoard().check() == -1) {
+            result(-1)
+            return true
+        } else if (playAI.getBoard().check() == 0) {
+            result(0)
+            return true
+        }
+        return false
+    }
+    
     func result(result: Int) {
         presentControllerWithName("resultView", context: result)
+        flag = 2
     }
     
     func aiMove() {
